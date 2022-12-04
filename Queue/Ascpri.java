@@ -75,28 +75,7 @@ public class Ascpri {
             inserti(n);
             display();
         }
-             //inserti(15);
-           // display();
-           // inserti(11);
-           // display();
-            //inserti(14);
-            //display();
-            //inserti(12);
-
-       // q.insert(6);
-       // q.insert(5);
-       // q.insert(1);
-       // q.insert(3);
           display();
-          //q.delete();
-          //q.display();
-          //q.delete();
-          //q.display();
-          //q.delete();
-          //q.display();
-          //q.delete();
-          //q.display();
-          //q.delete();
-          //q.display();   
+         
     }
 }
