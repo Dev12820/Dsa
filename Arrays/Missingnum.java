@@ -1,46 +1,24 @@
-/* package codechef; // don't place package name! */
-
 import java.util.*;
-import java.lang.*;
-import java.io.*;
-import java.util.Arrays;
-
-/* Name of the class has to be "Main" only if the class is public. */
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-		
-	int n,p=0,i,z,m;
-		int[] arr=new int[7];
-		Scanner sc=new Scanner(System.in);
-		n=sc.nextInt();
-		for(i=0;i<n;i++)
-		{
-		    arr[i]=sc.nextInt();
-		}
-		    for(i=0;i<n;i++)
-		    {
-		        for(int j=i+1;j<n;j++)
-		        {
-		           
-		            if(arr[j]<arr[i])
-		            {
-		                m=arr[i];
-		                arr[i]=arr[j];
-		                arr[j]=m;
-		            }
-		        }
-		    }
-	            for(i=0;i<n;i++)
-	            {
-	                p=p+arr[i];
-	            }
-	            m=((n+1)*(n+2))/2;
-	            z=m-p;
-	            System.out.println(z);
-	}
+public class Missingnum {
+    public static void main(String[] args) {
+        int n;
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
+        a[i]=sc.nextInt();
+        int max=a[0];
+        for(int i=1;i<n;i++)
+        if(a[i]>max)
+        max=a[i];
+        int dat[]=new int[max+1];
+        for(int i=0;i<n;i++)
+        dat[i]=0;
+        for(int i=0;i<n;i++)
+        dat[a[i]]++;
+        for(int i=1;i<=max;i++)
+        if(dat[i]==0)
+        System.out.print(i+" ");
+    }
+    
 }
-
-
